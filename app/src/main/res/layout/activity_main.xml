@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开启自动获取验证码功能"
+            android:textColor="#fff"
+            android:background="#007FFF"
+            android:id="@+id/start"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="关闭自动获取验证码功能"
+            android:textColor="#fff"
+            android:background="#007FFF"
+            android:id="@+id/stop"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
