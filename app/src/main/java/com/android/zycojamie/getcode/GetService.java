@@ -55,9 +55,11 @@ public class GetService extends Service {
             if(matcher.find()){
                 sbuilder2.append(matcher.group());
             }
-            ClipboardManager clipboardManager=(ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-            clipboardManager.setPrimaryClip(ClipData.newPlainText(null,sbuilder2.toString()));
-            Toast.makeText(getApplicationContext(),"已将验证码复制到剪贴板",Toast.LENGTH_SHORT).show();
+            if(!"".equals(sbuilder2.toString())){
+                ClipboardManager clipboardManager=(ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                clipboardManager.setPrimaryClip(ClipData.newPlainText(null,sbuilder2.toString()));
+                Toast.makeText(getApplicationContext(),"已将验证码复制到剪贴板",Toast.LENGTH_SHORT).show();
+            }
             sbuilder.setLength(0);
             sbuilder2.setLength(0);
             cursor.close();
